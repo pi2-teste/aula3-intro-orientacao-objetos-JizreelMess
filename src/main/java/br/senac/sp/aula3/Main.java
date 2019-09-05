@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.senac.sp.aula3;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author lucas.mendes
- */
+
 public class Main {
     
     public static void assertEqual(int a, int b) {
@@ -23,8 +16,12 @@ public class Main {
             throw new Error("EU esperava que "+a+" fosse igual a "+b);
         }
     }
+    
+    
+   
+   
 
-/*
+
     public static void testar_atributos() {
         Carro carro1 =  new Carro();
         Carro carro2 =  new Carro();
@@ -37,8 +34,8 @@ public class Main {
         assertEqual(carro2.getCor(), "prata");
         System.out.println("Parabéns, o teste de atributos está correto!");  
     }
-*/
-/*
+
+
     public static void testar_descricao() {
         Carro carro1 =  new Carro();
         Carro carro2 =  new Carro();
@@ -51,7 +48,7 @@ public class Main {
         assertEqual(carro3.descreve(), "Um carro");
         System.out.println("Parabéns, o teste da descrição está correto!");
     }
-*/
+
 /*    
     public static void testar_gasolina1() {
         Carro carro1 = new Carro();
@@ -94,11 +91,23 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //testar_atributos();
-        //testar_descricao();
+        testar_atributos();
+        testar_descricao();
         //testar_gasolina1();
         //testar_gasolina2();
         //testar_max_gasolina();
+        
+        Carro meuCarro = new Carro();
+        meuCarro.setModelo("Fiat Uno");
+        
+        Carro carroRodizio = new Carro();
+        carroRodizio.setModelo("Ford Escort");
+        carroRodizio.setCor("Prata");
+        
+        
+    
+        JOptionPane.showMessageDialog(null, carroRodizio.getModelo()+" - "+ carroRodizio.getCor());
+     
     }
     
 }
